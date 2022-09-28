@@ -11,5 +11,9 @@ Cell type of interest (from a list of selected)
 A matrix where rows are patients and columns are cell types
 
 
+### Run the script:  
+``dasds``
+
+
 
 
