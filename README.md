@@ -9,7 +9,7 @@ Cell type of interest (from a list of selected)
 
 
 ### Output:  
-A matrix where rows are patients and columns are cell types
+A file where rows are patients and column is the cell type. Each value represents the gene module score.
 
 
 ### Description  
