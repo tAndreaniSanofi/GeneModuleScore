@@ -14,8 +14,9 @@ A file where rows are patients and column is the cell type. Each value represent
 
 ### Description  
 Example how to run he code:  
+```
 Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt   RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Plasmacell_Gene_module.txt  
-
+```
 ## Exaplanation of the 4 input  
 Rscript is used to run an R script from unix command line while "Gene_Module.R" is the script to run  
 The 5 main parameters that the script takes are:  
@@ -50,12 +51,6 @@ The 5 main parameters that the script takes are:
 4) RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt: Matrix with the gene expression values  
 5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2  
 
-
-
-### Run the script:  
-```
-Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Plasmacell_Gene_module.txt
-```
 
 
 
