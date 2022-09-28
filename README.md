@@ -2,6 +2,7 @@
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
 ### Input:  
+The script/function to run  
 Gene Expression Matrix  
 Gene annotation  
 Cell type of interest (from a list of selected)  
