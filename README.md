@@ -13,7 +13,7 @@ A file where rows are patients and column is the cell type. Each value represent
 
 
 ### Description  
-Example how to run he code:  
+Example how to run the code on the bash command line:  
 ```
 Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt   RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Plasmacell_Gene_module.txt  
 ```
