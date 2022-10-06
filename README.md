@@ -95,7 +95,7 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- Phosphonate and phosphinate metabolism  
 	- Selenocompound metabolism  
 	- Cyanoamino acid metabolism  
-	- D-Amino acid metabolism (here)  
+	- D-Amino acid metabolism (here) Rscript Pathway_Score.r Master_Table_Pathways_and_Genes.tsv "Glutathione metabolism" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Pathway_Module/Glutathione_metabolism.txt  
 	- Glutathione metabolism  
 	- N-Glycan biosynthesis  
 	- Mannose type O-glycan biosynthesis  
