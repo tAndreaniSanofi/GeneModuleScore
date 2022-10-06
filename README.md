@@ -53,6 +53,7 @@ The 5 main parameters that the script takes are:
 
 ## Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism). Only Human related pathway are used for the Module score.    
 Name of the metabolic pathway to compute the module score, this is a full list (please use the exact word(s) using "":  
+1)  Complete list (we used only Human related):  
 	- Carbon fixation in photosynthetic organisms  
 	- Carbon fixation pathways in prokaryotes  
 	- Methane metabolism  
