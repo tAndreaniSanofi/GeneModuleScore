@@ -1,4 +1,4 @@
-# GMS
+	- # GMS
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
 ### Input (check the folder input):  
@@ -53,166 +53,161 @@ The 5 main parameters that the script takes are:
 
 ### Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism):  
 
-Carbon fixation in photosynthetic organisms  
-Carbon fixation pathways in prokaryotes  
-Methane metabolism  
-Nitrogen metabolism    
-Sulfur metabolism  
-Fatty acid biosynthesis  
-Fatty acid elongation  
-Fatty acid degradation  
-Cutin, suberine and wax biosynthesis  
-Steroid biosynthesis  
-Primary bile acid biosynthesis  
-Secondary bile acid biosynthesis  
-Steroid hormone biosynthesis  
-Glycerolipid metabolism  
-Glycerophospholipid metabolism  
-Ether lipid metabolism  
-Sphingolipid metabolism  
-Arachidonic acid metabolism  
-Linoleic acid metabolism  
-alpha-Linolenic acid metabolism  
-Biosynthesis of unsaturated fatty acids  
-Purine metabolism  
-Pyrimidine metabolism  
-Alanine, aspartate and glutamate metabolism  
-Glycine, serine and threonine metabolism  
-Cysteine and methionine metabolism  
-Valine, leucine and isoleucine degradation  
-Valine, leucine and isoleucine biosynthesis  
-Lysine biosynthesis  
-Lysine degradation  
-Arginine biosynthesis  
-Arginine and proline metabolism  
-Histidine metabolism  
-Tyrosine metabolism  
-Phenylalanine metabolism  
-Tryptophan metabolism  
-Phenylalanine, tyrosine and tryptophan biosynthesis  
-beta-Alanine metabolism  
-Taurine and hypotaurine metabolism  
-Phosphonate and phosphinate metabolism  
-Selenocompound metabolism  
-Cyanoamino acid metabolism  
-D-Amino acid metabolism  
-Glutathione metabolism  
-N-Glycan biosynthesis  
-Mannose type O-glycan biosynthesis  
-Various types of N-glycan biosynthesis  
-Mucin type O-glycan biosynthesis  
-Mannose type O-glycan biosynthesis  
-Other types of O-glycan biosynthesis  
-Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate  
-Glycosaminoglycan biosynthesis - heparan sulfate / heparin  
-Glycosaminoglycan biosynthesis - keratan sulfate  
-Glycosaminoglycan degradation  
-Glycosylphosphatidylinositol (GPI)-anchor biosynthesis  
-Glycosphingolipid biosynthesis - lacto and neolacto series  
-Glycosphingolipid biosynthesis - globo and isoglobo series  
-Glycosphingolipid biosynthesis - ganglio series  
-Other glycan degradation  
-Lipopolysaccharide biosynthesis  
-O-Antigen repeat unit biosynthesis  
-O-Antigen nucleotide sugar biosynthesis  
-Peptidoglycan biosynthesis  
-Teichoic acid biosynthesis  
-Lipoarabinomannan (LAM) biosynthesis  
-Arabinogalactan biosynthesis - Mycobacterium  
-Exopolysaccharide biosynthesis New!  
-Thiamine metabolism  
-Riboflavin metabolism  
-Vitamin B6 metabolism  
-Nicotinate and nicotinamide metabolism  
-Pantothenate and CoA biosynthesis  
-Biotin metabolism  
-Lipoic acid metabolism  
-Folate biosynthesis  
-One carbon pool by folate  
-Retinol metabolism  
-Porphyrin metabolism  
-Ubiquinone and other terpenoid-quinone biosynthesis  
-Terpenoid backbone biosynthesis  
-Monoterpenoid biosynthesis  
-Sesquiterpenoid and triterpenoid biosynthesis  
-Diterpenoid biosynthesis  
-Carotenoid biosynthesis  
-Brassinosteroid biosynthesis  
-Insect hormone biosynthesis  
-Zeatin biosynthesis  
-Limonene and pinene degradation  
-Geraniol degradation  
-Type I polyketide structures  
-Biosynthesis of 12-, 14- and 16-membered macrolides  
-Biosynthesis of ansamycins  
-Biosynthesis of enediyne antibiotics  
-Biosynthesis of type II polyketide backbone  
-Biosynthesis of type II polyketide products  
-Tetracycline biosynthesis  
-Polyketide sugar unit biosynthesis  
-Nonribosomal peptide structures  
-Biosynthesis of siderophore group nonribosomal peptides  
-Biosynthesis of vancomycin group antibiotics  
-Phenylpropanoid biosynthesis  
-Stilbenoid, diarylheptanoid and gingerol biosynthesis  
-Flavonoid biosynthesis  
-Flavone and flavonol biosynthesis  
-Anthocyanin biosynthesis  
-Isoflavonoid biosynthesis  
-Indole alkaloid biosynthesis  
-Indole diterpene alkaloid biosynthesis  
-Isoquinoline alkaloid biosynthesis  
-Tropane, piperidine and pyridine alkaloid biosynthesis  
-Biosynthesis of various alkaloids  
-Caffeine metabolism  
-Betalain biosynthesis  
-Glucosinolate biosynthesis  
-Benzoxazinoid biosynthesis  
-Penicillin and cephalosporin biosynthesis  
-Carbapenem biosynthesis  
-Monobactam biosynthesis  
-Clavulanic acid biosynthesis  
-Streptomycin biosynthesis  
-Neomycin, kanamycin and gentamicin biosynthesis  
-Acarbose and validamycin biosynthesis  
-Novobiocin biosynthesis  
-Staurosporine biosynthesis  
-Phenazine biosynthesis  
-Prodigiosin biosynthesis  
-Aflatoxin biosynthesis  
-Biosynthesis of various antibiotics  
-Biosynthesis of various plant secondary metabolites  
-Biosynthesis of various other secondary metabolites  
-Benzoate degradation  
-Aminobenzoate degradation  
-Fluorobenzoate degradation  
-Chloroalkane and chloroalkene degradation  
-Chlorocyclohexane and chlorobenzene degradation  
-Toluene degradation  
-Xylene degradation  
-Nitrotoluene degradation  
-Ethylbenzene degradation  
-Styrene degradation  
-Atrazine degradation  
-Caprolactam degradation  
-Bisphenol degradation  
-Dioxin degradation  
-Naphthalene degradation  
-Polycyclic aromatic hydrocarbon degradation  
-Furfural degradation  
-Steroid degradation  
-Metabolism of xenobiotics by cytochrome P450  
-Drug metabolism - cytochrome P450  
-Drug metabolism - other enzymes  
-Overview of biosynthetic pathways  
-Biosynthesis of plant secondary metabolites  
-Biosynthesis of phenylpropanoids  
-Biosynthesis of terpenoids and steroids  
-Biosynthesis of alkaloids derived from shikimate pathway  
-Biosynthesis of alkaloids derived from ornithine, lysine and nicotinic acid  
-Biosynthesis of alkaloids derived from histidine and purine  
-
-
-
-
-
+	- Carbon fixation in photosynthetic organisms  
+	- Carbon fixation pathways in prokaryotes  
+	- Methane metabolism  
+	- Nitrogen metabolism    
+	- Sulfur metabolism  
+	- Fatty acid biosynthesis  
+	- Fatty acid elongation  
+	- Fatty acid degradation  
+	- Cutin, suberine and wax biosynthesis  
+	- Steroid biosynthesis  
+	- Primary bile acid biosynthesis  
+	- Secondary bile acid biosynthesis  
+	- Steroid hormone biosynthesis  
+	- Glycerolipid metabolism  
+	- Glycerophospholipid metabolism  
+	- Ether lipid metabolism  
+	- Sphingolipid metabolism  
+	- Arachidonic acid metabolism  
+	- Linoleic acid metabolism  
+	- alpha-Linolenic acid metabolism  
+	- Biosynthesis of unsaturated fatty acids  
+	- Purine metabolism  
+	- Pyrimidine metabolism  
+	- Alanine, aspartate and glutamate metabolism  
+	- Glycine, serine and threonine metabolism  
+	- Cysteine and methionine metabolism  
+	- Valine, leucine and isoleucine degradation  
+	- Valine, leucine and isoleucine biosynthesis  
+	- Lysine biosynthesis  
+	- Lysine degradation  
+	- Arginine biosynthesis  
+	- Arginine and proline metabolism  
+	- Histidine metabolism  
+	- Tyrosine metabolism  
+	- Phenylalanine metabolism  
+	- Tryptophan metabolism  
+	- Phenylalanine, tyrosine and tryptophan biosynthesis  
+	- beta-Alanine metabolism  
+	- Taurine and hypotaurine metabolism  
+	- Phosphonate and phosphinate metabolism  
+	- Selenocompound metabolism  
+	- Cyanoamino acid metabolism  
+	- D-Amino acid metabolism  
+	- Glutathione metabolism  
+	- N-Glycan biosynthesis  
+	- Mannose type O-glycan biosynthesis  
+	- Various types of N-glycan biosynthesis  
+	- Mucin type O-glycan biosynthesis  
+	- Mannose type O-glycan biosynthesis  
+	- Other types of O-glycan biosynthesis  
+	- Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate  
+	- Glycosaminoglycan biosynthesis - heparan sulfate / heparin  
+	- Glycosaminoglycan biosynthesis - keratan sulfate  
+	- Glycosaminoglycan degradation  
+	- Glycosylphosphatidylinositol (GPI)-anchor biosynthesis  
+	- Glycosphingolipid biosynthesis - lacto and neolacto series  
+	- Glycosphingolipid biosynthesis - globo and isoglobo series  
+	- Glycosphingolipid biosynthesis - ganglio series  
+	- Other glycan degradation  
+	- Lipopolysaccharide biosynthesis  
+	- O-Antigen repeat unit biosynthesis  
+	- O-Antigen nucleotide sugar biosynthesis  
+	- Peptidoglycan biosynthesis  
+	- Teichoic acid biosynthesis  
+	- Lipoarabinomannan (LAM) biosynthesis  
+	- Arabinogalactan biosynthesis - Mycobacterium  
+	- Exopolysaccharide biosynthesis New!  
+	- Thiamine metabolism  
+	- Riboflavin metabolism  
+	- Vitamin B6 metabolism  
+	- Nicotinate and nicotinamide metabolism  
+	- Pantothenate and CoA biosynthesis  
+	- Biotin metabolism  
+	- Lipoic acid metabolism  
+	- Folate biosynthesis  
+	- One carbon pool by folate  
+	- Retinol metabolism  
+	- Porphyrin metabolism  
+	- Ubiquinone and other terpenoid-quinone biosynthesis  
+	- Terpenoid backbone biosynthesis  
+	- Monoterpenoid biosynthesis  
+	- Sesquiterpenoid and triterpenoid biosynthesis  
+	- Diterpenoid biosynthesis  
+	- Carotenoid biosynthesis  
+	- Brassinosteroid biosynthesis  
+	- Insect hormone biosynthesis  
+	- Zeatin biosynthesis  
+	- Limonene and pinene degradation  
+	- Geraniol degradation  
+	- Type I polyketide structures  
+	- Biosynthesis of 12-, 14- and 16-membered macrolides  
+	- Biosynthesis of ansamycins  
+	- Biosynthesis of enediyne antibiotics  
+	- Biosynthesis of type II polyketide backbone  
+	- Biosynthesis of type II polyketide products  
+	- Tetracycline biosynthesis  
+	- Polyketide sugar unit biosynthesis  
+	- Nonribosomal peptide structures  
+	- Biosynthesis of siderophore group nonribosomal peptides  
+	- Biosynthesis of vancomycin group antibiotics  
+	- Phenylpropanoid biosynthesis  
+	- Stilbenoid, diarylheptanoid and gingerol biosynthesis  
+	- Flavonoid biosynthesis  
+	- Flavone and flavonol biosynthesis  
+	- Anthocyanin biosynthesis  
+	- Isoflavonoid biosynthesis  
+	- Indole alkaloid biosynthesis  
+	- Indole diterpene alkaloid biosynthesis  
+	- Isoquinoline alkaloid biosynthesis  
+	- Tropane, piperidine and pyridine alkaloid biosynthesis  
+	- Biosynthesis of various alkaloids  
+	- Caffeine metabolism  
+	- Betalain biosynthesis  
+	- Glucosinolate biosynthesis  
+	- Benzoxazinoid biosynthesis  
+	- Penicillin and cephalosporin biosynthesis  
+	- Carbapenem biosynthesis  
+	- Monobactam biosynthesis  
+	- Clavulanic acid biosynthesis  
+	- Streptomycin biosynthesis  
+	- Neomycin, kanamycin and gentamicin biosynthesis  
+	- Acarbose and validamycin biosynthesis  
+	- Novobiocin biosynthesis  
+	- Staurosporine biosynthesis  
+	- Phenazine biosynthesis  
+	- Prodigiosin biosynthesis  
+	- Aflatoxin biosynthesis  
+	- Biosynthesis of various antibiotics  
+	- Biosynthesis of various plant secondary metabolites  
+	- Biosynthesis of various other secondary metabolites  
+	- Benzoate degradation  
+	- Aminobenzoate degradation  
+	- Fluorobenzoate degradation  
+	- Chloroalkane and chloroalkene degradation  
+	- Chlorocyclohexane and chlorobenzene degradation  
+	- Toluene degradation  
+	- Xylene degradation  
+	- Nitrotoluene degradation  
+	- Ethylbenzene degradation  
+	- Styrene degradation  
+	- Atrazine degradation  
+	- Caprolactam degradation  
+	- Bisphenol degradation  
+	- Dioxin degradation  
+	- Naphthalene degradation  
+	- Polycyclic aromatic hydrocarbon degradation  
+	- Furfural degradation  
+	- Steroid degradation  
+	- Metabolism of xenobiotics by cytochrome P450  
+	- Drug metabolism - cytochrome P450  
+	- Drug metabolism - other enzymes  
+	- Overview of biosynthetic pathways  
+	- Biosynthesis of plant secondary metabolites  
+	- Biosynthesis of phenylpropanoids  
+	- Biosynthesis of terpenoids and steroids  
+	- Biosynthesis of alkaloids derived from shikimate pathway  
+	- Biosynthesis of alkaloids derived from ornithine, lysine and nicotinic acid  
+	- Biosynthesis of alkaloids derived from histidine and purine  
