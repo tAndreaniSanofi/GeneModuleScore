@@ -3,7 +3,7 @@ Calculation of Gene Module Scores from gene expression matrices to characterize 
 
 ### Input:  
 The script/function to run  
-Gene Expression Matrix  
+Gene Expression Matrix (bring the one that you have from your samples)  
 Gene annotation  
 Cell type of interest (from a list of selected)  
 
