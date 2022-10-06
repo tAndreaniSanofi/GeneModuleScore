@@ -52,7 +52,7 @@ The 5 main parameters that the script takes are:
 5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2  
 
 ## Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism)  
-Name of the metabolic pathway to compute the gene module score, this is a full list (please use the exact word(s) using "":  
+Name of the metabolic pathway to compute the module score, this is a full list (please use the exact word(s) using "":  
 	- Carbon fixation in photosynthetic organisms  
 	- Carbon fixation pathways in prokaryotes  
 	- Methane metabolism  
