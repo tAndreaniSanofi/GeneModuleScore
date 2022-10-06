@@ -95,7 +95,7 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- Phosphonate and phosphinate metabolism  
 	- Selenocompound metabolism  
 	- Cyanoamino acid metabolism  
-	- D-Amino acid metabolism  
+	- D-Amino acid metabolism (here)  
 	- Glutathione metabolism  
 	- N-Glycan biosynthesis  
 	- Mannose type O-glycan biosynthesis  
