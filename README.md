@@ -15,7 +15,7 @@ A file where rows are patients and column is the cell type. Each value represent
 ### Description  
 Example how to run the code on the bash command line:  
 ```
-Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt   RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Plasmacell_Gene_module.txt  
+Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt Gene_Expression_Matrix.txt Plasmacell_Gene_module.txt  
 ```
 ## Exaplanation of the 4 input and 1 output  
 Rscript is used to run an R script from unix command line while "Gene_Module.R" is the script to run  
@@ -48,7 +48,7 @@ The 5 main parameters that the script takes are:
 	- gamma delta positive T cells
 
 3) Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt: annotation of the gene's name  
-4) RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt: Matrix with the gene expression values  
+4) Gene_Expression_Matrix.txt: Matrix with the gene expression values  (row genes, columns Patient Id)
 5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2  
 
 ### Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism):  
