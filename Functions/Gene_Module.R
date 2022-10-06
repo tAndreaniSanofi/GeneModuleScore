@@ -45,4 +45,3 @@ main <- function() {
  write.table(Gene_module_scores_vst,file=output,quote=F,row.names = F,col.names = T,sep="\t")
 }
 main()
-Footer
