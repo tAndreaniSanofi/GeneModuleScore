@@ -41,8 +41,7 @@ main <- function() {
  row.names(Gene_module_scores_vst)
  Id <- row.names(Gene_module_scores_vst)
  Gene_module_scores_vst <- as.data.frame(cbind(Id,Gene_module_scores_vst$Gene_module_scores))
- colnames(Gene_module_scores_vst)[2] <- cell_type_of_interest
+ colnames(Gene_module_scores_vst)[2] <- pathway_of_interest 
  write.table(Gene_module_scores_vst,file=output,quote=F,row.names = F,col.names = T,sep="\t")
 }
 main()
-Footer
