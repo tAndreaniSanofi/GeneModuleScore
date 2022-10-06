@@ -1,7 +1,7 @@
 # GMS
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
-### Input:  
+### Input (check the folder input):  
 The script/function to run  
 Gene Expression Matrix (bring the one that you have from your samples)  
 Gene annotation  
