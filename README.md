@@ -263,15 +263,15 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- 000983	Drug metabolism - other enzymes  
 
 13) Chemical structure transformation maps    
-01010	Overview of biosynthetic pathways  
-01060	Biosynthesis of plant secondary metabolites  
-01061	Biosynthesis of phenylpropanoids  
-01062	Biosynthesis of terpenoids and steroids  
-01063	Biosynthesis of alkaloids derived from shikimate pathway  
-01064	Biosynthesis of alkaloids derived from ornithine, lysine and nicotinic acid  
-01065	Biosynthesis of alkaloids derived from histidine and purine  
-01066	Biosynthesis of alkaloids derived from terpenoid and polyketide  
-01070	Biosynthesis of plant hormones  
+	- 01010	Overview of biosynthetic pathways  
+	- 01060	Biosynthesis of plant secondary metabolites  
+	- 01061	Biosynthesis of phenylpropanoids  
+	- 01062	Biosynthesis of terpenoids and steroids  
+	- 01063	Biosynthesis of alkaloids derived from shikimate pathway  
+	- 01064	Biosynthesis of alkaloids derived from ornithine, lysine and nicotinic acid  
+	- 01065	Biosynthesis of alkaloids derived from histidine and purine  
+	- 01066	Biosynthesis of alkaloids derived from terpenoid and polyketide  
+	- 01070	Biosynthesis of plant hormones  
 
 ```
 Rscript Pathway_Score.r Master_Table_Pathways_and_Genes.tsv "Glutathione metabolism" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Pathway_Module/Glutathione_metabolism.txt   
