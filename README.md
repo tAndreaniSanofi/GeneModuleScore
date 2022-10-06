@@ -1,4 +1,4 @@
-	- # GMS
+### GMS
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
 ### Input (check the folder input):  
@@ -51,12 +51,12 @@ The 5 main parameters that the script takes are:
 4) Gene_Expression_Matrix.txt: Matrix with the gene expression values  (row genes, columns Patient Id)
 5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2  
 
-### Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism):  
-
+## Metabolic Pathways (list from here: https://www.kegg.jp/kegg/pathway.html#metabolism)  
+Name of the metabolic pathway to compute the gene module score, this is a full list (please use the exact word(s) using "":  
 	- Carbon fixation in photosynthetic organisms  
 	- Carbon fixation pathways in prokaryotes  
 	- Methane metabolism  
-	- Nitrogen metabolism    
+	- Nitrogen metabolism  
 	- Sulfur metabolism  
 	- Fatty acid biosynthesis  
 	- Fatty acid elongation  
