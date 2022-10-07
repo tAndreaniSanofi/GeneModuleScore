@@ -259,8 +259,8 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- 00365	Furfural degradation  
 	- 00984	Steroid degradation  
 	- 00980	Metabolism of xenobiotics by cytochrome P45  
-	- 000982	Drug metabolism - cytochrome P45  
-	- 000983	Drug metabolism - other enzymes  
+	- 00982	Drug metabolism - cytochrome P45  
+	- 00983	Drug metabolism - other enzymes  
 
 13) Chemical structure transformation maps    
 	- 01010	Overview of biosynthetic pathways  
