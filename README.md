@@ -155,7 +155,7 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- 00603	Glycosphingolipid biosynthesis - globo and isoglobo series  
 	- 00604	Glycosphingolipid biosynthesis - ganglio series  
 	- 00511	Other glycan degradation  
-	- 00540	MLipopolysaccharide biosynthesis  
+	- 00540	Lipopolysaccharide biosynthesis  
 	- 00542	O-Antigen repeat unit biosynthesis  
 	- 00541	O-Antigen nucleotide sugar biosynthesis  
 	- 00550	Peptidoglycan biosynthesis  
