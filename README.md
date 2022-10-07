@@ -67,12 +67,12 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- 01220	Degradation of aromatic compounds  
 
 2) Carbohydrate metabolism  
-	- 00010	NGlycolysis / Gluconeogenesis  
+	- 00010	Glycolysis / Gluconeogenesis  
 	- 00020	Citrate cycle (TCA cycle)  
 	- 00030	Pentose phosphate pathway  
 	- 00040	Pentose and glucuronate interconversions  
 	- 00051	Fructose and mannose metabolism  
-	- 00052	NGalactose metabolism  
+	- 00052	Galactose metabolism  
 	- 00053	Ascorbate and aldarate metabolism  
 	- 00500	Starch and sucrose metabolism  
 	- 00520	Amino sugar and nucleotide sugar metabolism  
