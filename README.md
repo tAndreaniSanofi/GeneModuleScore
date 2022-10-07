@@ -136,9 +136,9 @@ Name of the metabolic pathway to compute the module score, this is a full list (
 	- 00430	Taurine and hypotaurine metabolism  
 	- 00440	Phosphonate and phosphinate metabolism  
 	- 00450	Selenocompound metabolism  
-	- 00460	MCyanoamino acid metabolism  
+	- 00460	Cyanoamino acid metabolism  
 	- 00470	D-Amino acid metabolism  
-	- 00480	NGlutathione metabolism  
+	- 00480	Glutathione metabolism  
 
 8) Glycan biosynthesis and metabolism    
 	- 00510	N-Glycan biosynthesis  
