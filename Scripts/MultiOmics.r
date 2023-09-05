@@ -1,37 +1,9 @@
 # Introduction ------------------------------------------------------------
 
 # Image: R_Lib Common
-# Output: MOFA model on RNAseq and metabolomics data
-# Data: DESeq2 object after variance stabilizing transformation (VST)
-# Data: Metabolon peak area data
-
-# Reference: https://huber-group-embl.github.io/mofaCLL/analysisProcedure.html
-# Updated tutorial: https://raw.githack.com/bioFAM/MOFA2_tutorials/master/R_tutorials/CLL.html
-
-# Set environment variables -----------------------------------------------
-
-#Sys.setenv(PATH = paste("/cloud-home/I0442220/.cache/basilisk/1.2.1/MOFA2-1.0.1/mofa_env",
-#                        Sys.getenv()["PATH"],
-#                        sep = ";"
-#))
-
-# Load library ------------------------------------------------------------
-
-
-#Sys.setenv(PATH = paste("/cloud-home/I0439277/.cache/basilisk/1.2.1/MOFA2-1.0.1/mofa_env/",
-#                        Sys.getenv()["PATH"],
-#                        sep = ";"
-#))
-
-#https://stackoverflow.com/questions/75772757/r-for-data-science-chapter-2-2-2-already-getting-error-messages-before-ive-star
-#unlink("/cloud-home/I0439277/R/x86_64-pc-linux-gnu-library/4.0.0/00LOCK-rlang", recursive = TRUE)
-#remove.packages("rlang")
-#remove.packages("ggplot2")
-#install.packages("ggplot2")
-#install.packages("rlang")
+# Output: MOFA model on RNAseq, Metabolomics, Proteomics, Lipidomics data
 
 rm(list=ls())
-
 
 library(data.table)
 library(dplyr)
@@ -119,40 +91,15 @@ blood_transcriptome_t <- blood_transcriptome_t[,-60701]
 blood_transcriptome_visit3_toci <- blood_transcriptome_t
 head(blood_transcriptome_visit3_toci[1:3,1:3])
 
-#select common patients
-blood_transcriptome_visit3_toci$PatientId
-dim(blood_transcriptome_visit3_toci)
-synovium_transcriptome_visit3_toci$PatientId
-dim(synovium_transcriptome_visit3_toci)
-lipidomics_visit3_toci$Patient_Id
-dim(lipidomics_visit3_toci)
-metabolomics_visit3_rituximab$PatientId
-dim(metabolomics_visit3_toci)
-proteomics_visit3_toci$Patient.I.D.
-dim(proteomics_visit3_toci)
-metadata_visit3_toci$Patient.I.D.
-dim(metadata_visit3_toci)
-
-dim(blood_transcriptome_visit3_toci)
-dim(synovium_transcriptome_visit3_toci)
-dim(lipidomics_visit3_toci)
-dim(metabolomics_visit3_toci)
-dim(proteomics_visit3_toci)
-
-metabolomics_visit3_toci$Patient_Id
-
-getwd()
+#export and re-impor the data
 write.table(synovium_transcriptome_visit3_toci,"../../tocilizumab/R4RA_synovium_transcriptome_visit3_toci_Id_converted.txt",quote=F,sep = "\t",col.names = T,row.names = F)
 write.table(blood_transcriptome_visit3_toci,"../../tocilizumab/R4RA_blood_transcriptome_visit3_toci_Id_converted.txt",quote=F,sep = "\t",col.names = T,row.names = F)
 write.table(lipidomics_visit3_toci,"../../tocilizumab/R4RA_lipidomics_visit3_toci_Id_converted.txt",quote=F,sep = "\t",col.names = T,row.names = F)
 write.table(metabolomics_visit3_toci,"../../tocilizumab/R4RA_metabolomics_visit3_toci_Id_converted.txt",quote=F,sep = "\t",col.names = T,row.names = F)
 write.table(proteomics_visit3_toci,"../../tocilizumab/R4RA_proteomics_visit3_toci_Id_converted.txt",quote=F,sep = "\t",col.names = T,row.names = F)
 
-# shared : c(NOVAR4RA1089 LOUVR4RA0815 SENDR4RA1124 NEWCR4RA0801 LOUVR4RA1038 QMULR4RA0400 QMULR4RA0260 QMULR4RA0160 QMULR4RA0535 BARCR4RA0820 LISBR4RA1201 LOUVR4RA0605 QMULR4RA0196 NEWCR4RA1014 QMULR4RA0474 QMULR4RA0123 MANCR4RA0881 CARDR4RA0807 QMULR4RA0042 LISBR4RA0802 QMULR4RA0565 QMULR4RA0221 QMULR4RA0567 NOVAR4RA1091 QMULR4RA0597 LISBR4RA0636 CAGLR4RA0667 BARCR4RA0616 SOUTR4RA1084 QMULR4RA0128 NEWCR4RA0715 BARCR4RA0699 LOUVR4RA0888 LOUVR4RA1009 QMULR4RA0048 GUYSR4RA1198 QMULR4RA0401 LOUVR4RA1179 LOUVR4RA1042 SOUTR4RA0677 QMULR4RA0102 NOVAR4RA0768 CARDR4RA1186 QMULR4RA0315 HOMER4RA0804 CARDR4RA0676 BASIR4RA1157 QMULR4RA0373 LOUVR4RA0889 LOUVR4RA1083 HOMER4RA0837 QMULR4RA0197 SOUTR4RA0921 LOUVR4RA0713 LEUVR4RA1018 QMULR4RA0142 LOUVR4RA0975 QMULR4RA0292 LOUVR4RA0915)
-
 #subset only the shared among all
 shared_patients_across_modalities <- c("NOVAR4RA1089","LOUVR4RA0815","SENDR4RA1124"," NEWCR4RA0801","LOUVR4RA1038","QMULR4RA0400","QMULR4RA0260","QMULR4RA0160","QMULR4RA0535","BARCR4RA0820","LISBR4RA1201","LOUVR4RA0605","QMULR4RA0196","NEWCR4RA1014","QMULR4RA0474","QMULR4RA0123","MANCR4RA0881","CARDR4RA0807","QMULR4RA0042","LISBR4RA0802","QMULR4RA0565","QMULR4RA0221","QMULR4RA0567","NOVAR4RA1091","QMULR4RA0597","LISBR4RA0636","CAGLR4RA0667","BARCR4RA0616","SOUTR4RA1084","QMULR4RA0128","NEWCR4RA0715","BARCR4RA0699","LOUVR4RA0888","LOUVR4RA1009","QMULR4RA0048","GUYSR4RA1198","QMULR4RA0401","LOUVR4RA1179","LOUVR4RA1042","SOUTR4RA0677","QMULR4RA0102","NOVAR4RA0768","CARDR4RA1186","QMULR4RA0315","HOMER4RA0804","CARDR4RA0676","BASIR4RA1157","QMULR4RA0373","LOUVR4RA0889","LOUVR4RA1083","HOMER4RA0837","QMULR4RA0197","SOUTR4RA0921","LOUVR4RA0713","LEUVR4RA1018","QMULR4RA0142","LOUVR4RA0975","QMULR4RA0292","LOUVR4RA0915")
-
 
 
 #load modalities
@@ -430,8 +377,8 @@ plot_variance_explained(MOFAobject, plot_total = T)[[2]]
 ######################
 ##Interpretation output
 ######################
-##Interpretation output
-metadata <-read_xlsx("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/R4RA_full_metadata_20221111.xlsx")
+
+                        metadata <-read_xlsx("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/R4RA_full_metadata_20221111.xlsx")
 metadata <- as.data.frame(metadata)
 metadata_visit3_toci <- subset(metadata, Visit == "3" & Randomized.medication == "Tocilizumab")
 metadata_visit3_toci <- metadata_visit3_toci[metadata_visit3_toci$Patient.I.D. %in% useSamples, ]
