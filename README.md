@@ -1,4 +1,4 @@
-### GMS
+### Gene Module Score to estimate cell type abundance
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
 ### Input (check the folder input):  
@@ -49,4 +49,24 @@ The 5 main parameters that the script takes are:
 
 3) Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt: annotation of the gene's name  
 4) Gene_Expression_Matrix.txt: Matrix with the gene expression values  (row genes, columns Patient Id)
-5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2  
+5) Plasmacell_Gene_module.txt: Output with the gene module score for the cell type under investigation for each patient. In the example "Plasmacell" but can be changed according to the cell type in the parameter 2
+
+
+
+### Multi Omics data integration to characterize Responders vs Not Responders patients at baseline treated with biologics
+Script to conduct data wrangling, obtain Multi Omics Factor Analysis (MOFA) models and interpretation
+
+### Input (check the folder input):  
+Matrices of:
+1) RNA-seq blood
+2) RNA-seq synovium
+3) Targeted Proteomics Olink
+4) Lipidomics
+5) Metabolomics
+
+
+### Output:  
+Plot with top features (genes, metabolites, lipids, proteins..) associated with response to treatment.
+
+### Script:
+Check the folder Script.
