@@ -69,4 +69,4 @@ Matrices of:
 Plot with top features (genes, metabolites, lipids, proteins..) associated with response to treatment.
 
 ### Script:
-Check the folder Script.
+Check the folder Script `Multiomics.r`.
