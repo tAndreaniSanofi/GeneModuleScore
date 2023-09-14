@@ -69,4 +69,4 @@ Matrices of:
 Plot with top features (genes, metabolites, lipids, proteins..) associated with response to treatment.
 
 ### Script:
-Check the folder Script `Multiomics.r`.
+Check the folder Script `MultiOmics_R_vs_NR_Rituximab.r`.
