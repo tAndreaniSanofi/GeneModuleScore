@@ -1,14 +1,14 @@
 ## Gene Module Score to estimate cell type abundance
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
-### Input (check the folder input):  
+### Input (check the folder input)  
 The function to run  
 Gene Expression Matrix (bring the one that you have from your samples)  
 Gene annotation  
 Cell type of interest (from a list of selected)  
 
 
-### Output:  
+### Output  
 A file where rows are patients and column is the cell type. Each value represents the gene module score.
 
 
@@ -59,7 +59,7 @@ Check the folder Script `HeatMap_GeneModules_R4RA.r`
 ## Multi Omics data integration to characterize Responders vs Not Responders patients at baseline treated with biologics
 Script to conduct data wrangling, obtain Multi Omics Factor Analysis (MOFA) models and interpretation
 
-### Input (check the folder input):  
+### Input (check the folder input)  
 Matrices of:
 1) RNA-seq blood
 2) RNA-seq synovium
@@ -68,7 +68,7 @@ Matrices of:
 5) Metabolomics
 
 
-### Output:  
+### Output  
 Plot with top features (genes, metabolites, lipids, proteins..) associated with response to treatment.
 
 ### Script:
