@@ -15,7 +15,7 @@ A file where rows are patients and column is the cell type. Each value represent
 ### Run the bash script  
 Example how to run the code on the bash command line:  
 ```
-Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt Gene_Expression_Matrix.txt Plasmacell_Gene_module.txt  
+Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt RA_Synovium.PEAC.Baseline.RNASeq.Genes.Outliers_removed_Batch_corrected.Count.vst_20220503.txt Plasmacell_Gene_module.txt  
 ```
 ### Description and exaplanation of the 4 input and 1 output  
 Rscript is used to run an R script from unix command line while "Gene_Module.R" is the script to run  
