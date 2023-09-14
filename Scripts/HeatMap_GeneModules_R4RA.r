@@ -7,58 +7,49 @@ library(dplyr)
 library(xtable)
 library(readxl)
 
-
+#Load the gene modules matrix
 mat <- read.delim("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Master_Table_Parsed.tsv")
 mat_sort <- mat[order(mat$Id),]
 samples <- mat_sort$Id
 dim(mat)
 
-
+#Load the metadata
 metadata <-read_xlsx("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/R4RA_full_metadata_20221111.xlsx")
 metadata <- as.data.frame(metadata)
 str(metadata)
 
-
+#Quality check that metadata patient Id and gene module matrix patient Id are in agreement
 R4RA <- metadata[metadata$QiagenID_Synovium %in% samples, ]
 R4RA_sort <- R4RA[order(R4RA$QiagenID_Synovium),]
 R4RA_sort$QiagenID_Synovium==mat_sort$Id
 
-
+#subset the metadata by Visit (3 or 7) first and by Drug (Rituximab or Tocilizumab)
 metadata_visit3_visit7 <- subset(metadata,Visit=="3" | Visit=="7") 
 metadata_visit3_visit7_rituximab_tocilizumab <- subset(metadata_visit3_visit7, Randomized.medication=="Rituximab"| Randomized.medication=="Tocilizumab")
 length(unique(metadata_visit3_visit7_rituximab_tocilizumab$QiagenID_Synovium))
 
 
-
+#remove from the metadata all the samples that are not outliers (by selecting only samples that are in the gene module matrix)
 metadata_visit3_visit7_rituximab_tocilizumab_no_outliers <- metadata_visit3_visit7_rituximab_tocilizumab[metadata_visit3_visit7_rituximab_tocilizumab$QiagenID_Synovium %in% samples, ]
 metadata_visit3_visit7_rituximab_tocilizumab_no_outliers <- metadata_visit3_visit7_rituximab_tocilizumab_no_outliers[,-c(1)]
 metadata_visit3_visit7_rituximab_tocilizumab_no_outliers <- as.data.frame(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers)
 
-metadata_visit3_visit7_rituximab_tocilizumab_no_outliers$Acute
-
-#write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt",quote=F,sep="\t",col.names = T,row.names = F)
-#write_excel_csv(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.tsv")
-#write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers, '/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt',sep="\t",col.names = T,row.names = F)
-test <- read.table("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt")
-
-str(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers)
+#subset the metadata with the clinical and patient information to plot
 metadata <- R4RA_sort[,c("QiagenID_Synovium","Visit","Randomized.medication","CDAI.response.status.V7","Pathotype","CD3","CD20","CD68L","CD68SL","CD138","DAS28.ESR","DAS28.CRP",
                          "VAS.Global","VAS.physician","RF.Visit1","CCP.Visit1","DAS28.ESR.status","DAS28.ESR.status.V7","DAS28.CRP.status","DAS28.CRP.status.V7","BMI","Tender.Joint.Count",
                          "Swollen.Joint.Count","Neutrophils","Age.Visit1")]
 
-#obatin samples in different conditions
+#obatain samples' metadata in different conditions
 metadata_visit3 <- subset(metadata,Visit=="3")
 metadata_visit3_rituximab <- subset(metadata_visit3,Randomized.medication=="Rituximab")
-#metadata_visit3_rituximab_responder_ACR20 <- subset(metadata_visit3_rituximab$,=="Rituximab")
-str(metadata_visit3_rituximab)
-
-
 metadata_visit3_tocilizumab <- subset(metadata_visit3,Randomized.medication=="Tocilizumab")
 metadata_visit7 <- subset(metadata,Visit=="7")
 metadata_visit7_rituximab <- subset(metadata_visit7,Randomized.medication=="Rituximab")
 metadata_visit7_tocilizumab <- subset(metadata_visit7,Randomized.medication=="Tocilizumab")
 metadata_rituximab <- subset(metadata,Randomized.medication=="Rituximab")
 metadata_tocilizumab <- subset(metadata,Randomized.medication=="Tocilizumab")
+
+#exatract only the patient Id for each combination
 samples_vist3 <- metadata_visit3$QiagenID_Synovium
 samples_vist7 <- metadata_visit7$QiagenID_Synovium
 samples_rituximab <- metadata_rituximab$QiagenID_Synovium
@@ -99,7 +90,7 @@ R4RA_gene_modules_rituximab <- data.frame(mat_sort_rituximab, row.names = 1)
 
 
 
-#obtain the matrices
+#obtain the matrices in the format for the plot (by transposing them)
 mat <- t(R4RA_gene_modules)
 mat_visit3 <- t(as.matrix(R4RA_gene_modules_visit3))
 mat_visit3_rituximab <- t(as.matrix(R4RA_gene_modules_visit3_rituximab))
@@ -111,7 +102,7 @@ mat_rituximab <- t(as.matrix(R4RA_gene_modules_rituximab))
 mat_tocilizumab <- t(as.matrix(R4RA_gene_modules_tocilizumab))
 
 
-#all sameples
+#create an object for the variables to include in the plots (one for each type of plot)
 ann <- data.frame(
   Pathotype = as.character(metadata$Pathotype),
   CD3 = as.numeric(metadata$CD3),
