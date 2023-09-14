@@ -2,7 +2,7 @@
 Calculation of Gene Module Scores from gene expression matrices to characterize the cell type(s) in different patients.
 
 ### Input (check the folder input):  
-The script/function to run  
+The function to run  
 Gene Expression Matrix (bring the one that you have from your samples)  
 Gene annotation  
 Cell type of interest (from a list of selected)  
@@ -12,12 +12,12 @@ Cell type of interest (from a list of selected)
 A file where rows are patients and column is the cell type. Each value represents the gene module score.
 
 
-### Description  
+### Run the bash script  
 Example how to run the code on the bash command line:  
 ```
 Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGenCode.V33.Genes.annotation3.txt Gene_Expression_Matrix.txt Plasmacell_Gene_module.txt  
 ```
-## Exaplanation of the 4 input and 1 output  
+### Description and exaplanation of the 4 input and 1 output  
 Rscript is used to run an R script from unix command line while "Gene_Module.R" is the script to run  
 The 5 main parameters that the script takes are:  
 1) cell_types_and_genes.txt: file in which for each cell type there is a list of gene specific;  
