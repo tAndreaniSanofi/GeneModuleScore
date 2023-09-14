@@ -4,11 +4,11 @@ library(circlize)
 library(colorspace)
 library(GetoptLong)
 library(dplyr)
+library(xtable)
+library(readxl)
 
 
-
-
-mat <- read_t("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Master_Table_Parsed.tsv")
+mat <- read.delim("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Master_Table_Parsed.tsv")
 mat_sort <- mat[order(mat$Id),]
 samples <- mat_sort$Id
 dim(mat)
@@ -36,10 +36,10 @@ metadata_visit3_visit7_rituximab_tocilizumab_no_outliers <- as.data.frame(metada
 
 metadata_visit3_visit7_rituximab_tocilizumab_no_outliers$Acute
 
-write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt",quote=F,sep="\t",col.names = T,row.names = F)
-write_excel_csv(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.tsv")
-write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers, '/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt',sep="\t",col.names = T,row.names = F)
-test <- read_tsv("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt")
+#write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt",quote=F,sep="\t",col.names = T,row.names = F)
+#write_excel_csv(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers,"/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.tsv")
+#write.table(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers, '/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt',sep="\t",col.names = T,row.names = F)
+test <- read.table("/cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/scripts/Gene_Module/R4RA/Metadata_Rituximab_Tocilizumab_visit3_visit7_no_outliers.txt")
 
 str(metadata_visit3_visit7_rituximab_tocilizumab_no_outliers)
 metadata <- R4RA_sort[,c("QiagenID_Synovium","Visit","Randomized.medication","CDAI.response.status.V7","Pathotype","CD3","CD20","CD68L","CD68SL","CD138","DAS28.ESR","DAS28.CRP",
@@ -49,8 +49,8 @@ metadata <- R4RA_sort[,c("QiagenID_Synovium","Visit","Randomized.medication","CD
 #obatin samples in different conditions
 metadata_visit3 <- subset(metadata,Visit=="3")
 metadata_visit3_rituximab <- subset(metadata_visit3,Randomized.medication=="Rituximab")
-metadata_visit3_rituximab_responder_ACR20 <- subset(metadata_visit3_rituximab$A,=="Rituximab")
-str(metadata_visit3_rituximab$AC)
+#metadata_visit3_rituximab_responder_ACR20 <- subset(metadata_visit3_rituximab$,=="Rituximab")
+str(metadata_visit3_rituximab)
 
 
 metadata_visit3_tocilizumab <- subset(metadata_visit3,Randomized.medication=="Tocilizumab")
@@ -640,4 +640,4 @@ hmap <- Heatmap(heat_tocilizumab_visit7,
                 column_dend_height = unit(25,'mm'),
                 )
 draw(hmap)
-head(heat_rituximab)
+
