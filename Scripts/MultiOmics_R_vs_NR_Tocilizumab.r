@@ -26,37 +26,11 @@ library(readxl)
 library(xlsx)
 library(reshape2)
 
-rm(list=ls())
-
-
-library(data.table)
-library(dplyr)
-library(tibble)
-library(tidyr)
-library(stringr)
-library(DESeq2)
-library(ggplot2)
-library(RColorBrewer)
-library(reticulate)
-library(corrplot)
-library(MOFA2)
-library(basilisk)
-library(ComplexHeatmap)
-library(circlize)
-library(colorspace)
-library(GetoptLong)
-library(dplyr)
-library(readxl)
-library(xlsx)
-library(reshape2)
-
 #Format Proteomics Data
 setwd("cloud-data/snf-mgln-dds/AIDA/Bioinformatics/i0439277/Pitzalis/R4RA/test_multiomics/Test/")
 
 #shared patients among all modalities
 shared_patients_across_modalities <- c("NOVAR4RA1089","LOUVR4RA0815","SENDR4RA1124"," NEWCR4RA0801","LOUVR4RA1038","QMULR4RA0400","QMULR4RA0260","QMULR4RA0160","QMULR4RA0535","BARCR4RA0820","LISBR4RA1201","LOUVR4RA0605","QMULR4RA0196","NEWCR4RA1014","QMULR4RA0474","QMULR4RA0123","MANCR4RA0881","CARDR4RA0807","QMULR4RA0042","LISBR4RA0802","QMULR4RA0565","QMULR4RA0221","QMULR4RA0567","NOVAR4RA1091","QMULR4RA0597","LISBR4RA0636","CAGLR4RA0667","BARCR4RA0616","SOUTR4RA1084","QMULR4RA0128","NEWCR4RA0715","BARCR4RA0699","LOUVR4RA0888","LOUVR4RA1009","QMULR4RA0048","GUYSR4RA1198","QMULR4RA0401","LOUVR4RA1179","LOUVR4RA1042","SOUTR4RA0677","QMULR4RA0102","NOVAR4RA0768","CARDR4RA1186","QMULR4RA0315","HOMER4RA0804","CARDR4RA0676","BASIR4RA1157","QMULR4RA0373","LOUVR4RA0889","LOUVR4RA1083","HOMER4RA0837","QMULR4RA0197","SOUTR4RA0921","LOUVR4RA0713","LEUVR4RA1018","QMULR4RA0142","LOUVR4RA0975","QMULR4RA0292","LOUVR4RA0915")
-
-
 
 #load modalities
 synovium_transcriptome_visit3_toci <- read.table("../../tocilizumab/R4RA_synovium_transcriptome_visit3_toci_Id_converted.txt",header=T)
@@ -84,7 +58,7 @@ synovMat <- synovium_transcriptome_visit3_toci
 synovMat <- as.matrix(synovMat)
 head(synovMat)
 
-# Data distribution of RNAseq data
+# Data distribution of RNAseq data synovium
 boxplot(synovMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Synovium Transcriptome data")
 
 
@@ -104,7 +78,7 @@ bloodMat[ , i] <- apply(bloodMat[ , i], 2,            # Specify own function wit
 bloodMat <-as.matrix(bloodMat)
 head(bloodMat)
 
-# Data distribution of RNAseq data
+# Data distribution of RNAseq data blood
 boxplot(bloodMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Blood Transcriptome data")
 
 
@@ -119,7 +93,7 @@ lipidomicsMat <- lipidomics_visit3_toci
 lipidomicsMat <- as.matrix(lipidomicsMat)
 dim(lipidomicsMat)
 
-# Data distribution of RNAseq data
+# Data distribution of Lipidomics
 boxplot(lipidomicsMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Lipidomics Serum data")
 
 
@@ -132,7 +106,7 @@ metaMat <- metabolomics_visit3_toci
 metaMat <- as.matrix(metaMat)
 dim(metabolomics_visit3_toci)
 head(metaMat)
-# Data distribution of RNAseq data
+# Data distribution of Metabolomics data
 boxplot(metaMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Metabolomics Serum data")
 
 
@@ -145,7 +119,7 @@ proteoMat <- proteomics_visit3_toci
 proteoMat <- as.matrix(proteoMat)
 head(proteoMat)
 
-# Data distribution of RNAseq data
+# Data distribution of Proteomics data
 boxplot(proteoMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Proteomics Serum data")
 
 
