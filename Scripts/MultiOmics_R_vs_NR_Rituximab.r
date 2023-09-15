@@ -55,12 +55,11 @@ synovMat <- synovium_transcriptome_visit3_rituximab
 synovMat <- as.matrix(synovMat)
 head(synovMat)
 
-# Data distribution of RNAseq data
+# Data distribution of RNAseq data synovium
 boxplot(synovMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Synovium Transcriptome data")
 
 
 # Prepare Transcriptome Blood dataset --------------------------------------------------
-
 rownames(blood_transcriptome_visit3_rituximab) <- blood_transcriptome_visit3_rituximab$PatientId
 blood_transcriptome_visit3_rituximab <- blood_transcriptome_visit3_rituximab[,-c(1)]
 blood_transcriptome_visit3_rituximab <- t(blood_transcriptome_visit3_rituximab)
@@ -69,7 +68,7 @@ bloodMat <- blood_transcriptome_visit3_rituximab
 bloodMat <- as.matrix(bloodMat)
 head(bloodMat)
 
-# Data distribution of RNAseq data
+# Data distribution of RNAseq data blood
 boxplot(bloodMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Blood Transcriptome data")
 
 
@@ -83,7 +82,7 @@ lipidomicsMat <- lipidomics_visit3_rituximab
 lipidomicsMat <- as.matrix(lipidomicsMat)
 head(lipidomicsMat)
 
-# Data distribution of RNAseq data
+# Data distribution of Lipidomics data
 boxplot(lipidomicsMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Lipidomics Serum data")
 
 
@@ -97,7 +96,7 @@ metaMat <- metabolomics_visit3_rituximab
 metaMat <- as.matrix(metaMat)
 dim(metaMat)
 
-# Data distribution of RNAseq data
+# Data distribution of Metabolomics data
 boxplot(metaMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Metabolomics Serum data")
 
 
@@ -110,7 +109,7 @@ proteoMat <- proteomics_visit3_rituximab
 proteoMat <- as.matrix(proteoMat)
 head(proteoMat)
 
-# Data distribution of RNAseq data
+# Data distribution of Proteomics data
 boxplot(proteoMat, outline = FALSE, col = "cornflowerblue", main = "Transformed Proteomics Serum data")
 
 
