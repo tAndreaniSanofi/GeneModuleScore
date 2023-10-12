@@ -19,7 +19,7 @@ Rscript Gene_Module.R cell_types_and_genes.txt "Plasmacell" Human.B38_OmicsoftGe
 ```
 ### Description and exaplanation of the 4 input and 1 output  
 Rscript is used to run an R script from unix command line while "Gene_Module.R" is the script to run  
-The 5 main parameters that the script takes are:  
+The 5 main parameters the script takes are:  
 1) cell_types_and_genes.txt: file in which for each cell type there is a list of gene specific;  
 2) "Plasmacell": Name of the cell to compute the gene module score, this is a full list (please use the exact word(s) using "":  
 	- Basophils
